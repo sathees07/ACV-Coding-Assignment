@@ -1,0 +1,18 @@
+path: /home/Sathees/Downloads/Bosch/Final/02_model_training/dataset # dataset root dir
+train: images/train # train images (relative to 'path') 118287 images
+val: images/val # val images (optional) 
+test: # test images (optional)
+
+
+# Classes
+names:
+  0: person
+  1: rider
+  2: car
+  3: truck
+  4: bus
+  5: train
+  6: motor
+  7: bike
+  8: traffic light
+  9: traffic sign
