@@ -11,7 +11,7 @@ Below is a breakdown of the repository structure and instructions for running an
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```
 .
@@ -71,19 +71,23 @@ The dataset contains annotations for object detection, drivable area, and lane m
 
 `cd 01_data_analysis`
 
-1.  Use the provided parsing script to extract object detection data:\
+2.  Use the provided parsing script to extract object detection data:\
     `python extract_od_data.py --input <path-to-json> --output <output-path>`
 
+```
 For example,
 
-To extract from train dataset:\
-`python3 extract_od_data.py --input ../assignment_data_bdd/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_train.json --output od_train.json`
+To extract from train dataset:
 
-To extract from val dataset:\
-`python3 extract_od_data.py --input ../assignment_data_bdd/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_val.json --output od_val.json`
+python3 extract_od_data.py --input ../assignment_data_bdd/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_train.json --output od_train.json
+
+To extract from val dataset:
+
+python3 extract_od_data.py --input ../assignment_data_bdd/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_val.json --output od_val.json
 
 The script filters the JSON file to retain only the object detection annotations (e.g., car, person, traffic light, etc.) and stores the output in a simplified JSON format.
 
+```
 
 The folder structure is as follows:
 
@@ -175,3 +179,46 @@ All the steps involved in the BDD100K dataset analysis app are documented in the
 -   Filter and analyze the BDD100K dataset.
 
 -   Access specific functionalities like category filtering and label-based image exploration.
+
+
+Model Training Process
+======================
+
+Directory Structure
+-------------------
+
+The model training process is organized as follows:
+
+```
+.
+├── bdd_to_yolo.py
+├── dataset
+│   ├── classes.txt
+│   ├── images
+│   └── labels
+├── dataset.yml
+├── runs
+│   └── detect
+├── struct.md
+├── training.ipynb
+├── training_steps.png
+└── yolov8n.pt
+```
+All the steps involved in the Model Training are documented in the ```02_model_training/README.md``` file.
+
+
+
+### Model Evaluation
+
+The evaluation phase is a critical step in assessing the performance of the YOLO model trained on the BDD100K dataset.
+
+### Folder Structure for Evaluation
+
+```
+03_evaluation_visualization
+├── failure_analysis.py
+├── qual_performance_eval.py
+└── quan_performance_eval.ipynb
+```
+
+All the steps involved in the Model Training are documented in the ```03_evaluation_visualization/README.md``` file.
