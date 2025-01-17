@@ -136,6 +136,7 @@ The results, including metrics and visualizations, will be stored in the `runs` 
 
 -   Ensure dependencies and environments are set up correctly before running scripts or the notebook.
 
+![Training Process](training_steps.png)
 
 
 * * * * *
