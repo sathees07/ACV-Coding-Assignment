@@ -65,7 +65,7 @@ Place the downloaded files in the main folder.
 
 The dataset contains annotations for object detection, drivable area, and lane markings in a JSON format. For this task, only object detection labels were extracted.
 
-# Extraction Steps
+## Extraction Steps
 
 1.  Navigate to the directory `01_data_analysis`
 
@@ -208,7 +208,7 @@ All the steps involved in the Model Training are documented in the ```02_model_t
 
 
 
-### Model Evaluation
+# Model Evaluation
 
 The evaluation phase is a critical step in assessing the performance of the YOLO model trained on the BDD100K dataset.
 
